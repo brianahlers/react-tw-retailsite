@@ -1,14 +1,16 @@
 import nike1 from "../assets/n1-min.png";
+import { Select } from "./Select.jsx";
+import { QTY, SIZE } from "./constant.js";
 
 export function ShoeDetail() {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-4">
-        {/* SHOE IMAGE */}
+      {/* SHOE IMAGE */}
       <div className="flex-1 lg:-mt-32 lg:ml-28">
         <div className="flex-center h-full bg-gradient-to-br from-[#F637CF] from-25% via-[#E3D876] via-40% to-[#4DD4C6]">
-        <img src={nike1} />
+          <img src={nike1} />
         </div>
-        </div>
+      </div>
       <div className="flex-1 space-y-6">
         {/* SHOE TEXT DETAIL */}
         <div className="text-5xl font-black md:text-9xl">Nike Air Max 270</div>
@@ -17,8 +19,10 @@ export function ShoeDetail() {
             "THE NIKE AIR MAX 270 IS A LIFESTYLE SHOE THAT FITS YOUR LIFESTYLE. IT HAS TIGHT LOOKS"
           }
         </div>
-        <div className="text-3xl font-extrabold md:text-6xl">
-            $100
+        <div className="flex space-x-6">
+          <div className="text-3xl font-extrabold md:text-6xl">$100</div>
+          <Select title={"QTY"} options={QTY} />
+          <Select title={"SIZE"} options={SIZE} />
         </div>
         {/* SHOE BUTTONS AND LINKS */}
         <div className="space-x-10">
@@ -28,10 +32,10 @@ export function ShoeDetail() {
           <a
             href="#"
             className="text-lg font-bold underline underline-offset-4"
-            >
+          >
             View Details
           </a>
-          </div>
+        </div>
       </div>
     </div>
   );
