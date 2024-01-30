@@ -1,6 +1,6 @@
 import nike1 from "../assets/n1-min.png";
 import { Select } from "./Select.jsx";
-import { QTY, SIZE } from "./constant.js";
+import { QTY, SIZES } from "./constant.js";
 
 export function ShoeDetail() {
   return (
@@ -22,7 +22,7 @@ export function ShoeDetail() {
         <div className="flex space-x-6">
           <div className="text-3xl font-extrabold md:text-6xl">$100</div>
           <Select title={"QTY"} options={QTY} />
-          <Select title={"SIZE"} options={SIZE} />
+          <Select title={"SIZES"} options={SIZES} />
         </div>
         {/* SHOE BUTTONS AND LINKS */}
         <div className="space-x-10">
