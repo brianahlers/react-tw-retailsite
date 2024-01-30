@@ -16,3 +16,7 @@
     @apply transition active:scale-75;
   }
 }
+
+.bg-lines {
+  background-image: url('./assets/lines.png');
+}
